@@ -11,8 +11,8 @@
 
 # redis
 > docker run --name local-redis -p 6379:6379 -d redis   
-> container 종료 : docker stop local-redis  
-> container 시작 : docker start local-redis  
+ container 종료 : docker stop local-redis  
+ container 시작 : docker start local-redis  
 ## docker-compose
 > docker-compose -f redis/redis.yml
 
