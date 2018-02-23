@@ -1,0 +1,19 @@
+version : '2'
+
+services:
+# mariadb 설정
+  mariadb:
+    image: mariadb:10.3 #mariadb 10.3 버전
+    container_name: compose-maria #container_name 설정
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=dnpq123$$
+    # docker로 생성된 data를 영구적으로 보관하기 위해서 local서버의 디렉토리를  docker의 디렉토리와  mount 시킨다.
+    # mariadb의 변경된 data는 /data/apps/dbdata 디렉토리에 저장된다.
+    volumes:
+      - /data/apps/dbdata:/var/lib/mysql
+    # 서버가 재구동 됐을 경우 자동으로 container를 실행
+    restart: always
+    network_mode : host
+
