@@ -5,7 +5,7 @@
  container 종료 : docker stop local-mariadb   
  container 시작 : docker start local-mariadb   
 ## docker-compose
-> docker-compose -f maria/mariadb.yml
+> docker-compose -f maria/mariadb.yml up
 
 ***
 
@@ -14,7 +14,7 @@
  container 종료 : docker stop local-redis  
  container 시작 : docker start local-redis  
 ## docker-compose
-> docker-compose -f redis/redis.yml
+> docker-compose -f redis/redis.yml up
 
 ***
 
