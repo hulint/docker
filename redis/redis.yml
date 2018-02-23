@@ -1,0 +1,14 @@
+version : '2'
+
+services:
+# redis 설정
+  redis:
+    image: redis:3.2-alpine
+    ports:
+      - 6379:6379
+    container_name: compose-redis
+    volumes:
+      - /data/apps/redisdata:/data
+    restart: always
+    network_mode : host
+
