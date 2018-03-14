@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
+  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener"/>
+
+
+	<Service name="Catalina">
+		<Connector URIEncoding="UTF-8" port="8000" protocol="HTTP/1.1" proxyName="hulint.test" proxyPort="80" redirectPort="8443"/>
+
+		<Engine defaultHost="localhost" name="Catalina">
+			<Host appBase="webapps" autoDeploy="false" name="localhost" unpackWARs="false" xmlNamespaceAware="false" xmlValidation="false">
+
+			<Context docBase="" path="" reloadable="false" sessionCookiePath="/" /></Host>
+		</Engine>
+	</Service>
+</Server>
